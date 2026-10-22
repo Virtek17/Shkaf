@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" role="img" aria-label="Эскиз фигурки супергероя с приподнятой маской и брекетами">
+<defs>
+  <radialGradient id="bg"><stop stop-color="#fff"/><stop offset="1" stop-color="#e8edf2"/></radialGradient>
+  <radialGradient id="red" cx="35%" cy="25%" r="80%"><stop stop-color="#ff5559"/><stop offset=".48" stop-color="#d91d2d"/><stop offset="1" stop-color="#8e0b1c"/></radialGradient>
+  <linearGradient id="blue" x2=".8" y2="1"><stop stop-color="#3c78d0"/><stop offset=".6" stop-color="#1550a6"/><stop offset="1" stop-color="#082d71"/></linearGradient>
+  <linearGradient id="skin" x2=".4" y2="1"><stop stop-color="#f3bd93"/><stop offset="1" stop-color="#b87652"/></linearGradient>
+  <linearGradient id="eye" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#a5d1e6"/></linearGradient>
+  <filter id="shadow"><feGaussianBlur stdDeviation="16"/></filter>
+</defs>
+<rect width="900" height="1100" fill="url(#bg)"/>
+<ellipse cx="450" cy="1012" rx="265" ry="37" fill="#607082" opacity=".25" filter="url(#shadow)"/>
+<!-- legs -->
+<path d="M330 718 Q320 789 321 875 L407 881 Q432 812 440 743Z" fill="url(#blue)" stroke="#092959" stroke-width="9"/>
+<path d="M461 740 Q474 810 499 883 L580 870 Q578 790 555 718Z" fill="url(#blue)" stroke="#092959" stroke-width="9"/>
+<path d="M317 848 Q363 827 412 855 L408 935 Q394 966 335 955 Q308 936 317 848Z" fill="url(#red)" stroke="#80101a" stroke-width="9"/>
+<path d="M489 858 Q537 830 579 848 L592 951 Q550 970 501 940Z" fill="url(#red)" stroke="#80101a" stroke-width="9"/>
+<path d="M334 925 Q302 943 281 972 Q264 1008 301 1019 Q363 1038 412 1016 Q428 1005 406 951Z" fill="url(#red)" stroke="#80101a" stroke-width="9"/>
+<path d="M505 951 Q480 996 500 1013 Q550 1037 612 1019 Q647 1007 624 975 Q603 948 578 927Z" fill="url(#red)" stroke="#80101a" stroke-width="9"/>
+<!-- torso and arms -->
+<path d="M343 534 Q450 499 557 534 L601 657 Q571 735 452 753 Q332 739 299 660Z" fill="url(#red)" stroke="#80101a" stroke-width="10"/>
+<path d="M344 552 L294 629 Q309 691 366 727 L385 712 L386 574Z" fill="url(#blue)" stroke="#092959" stroke-width="7"/>
+<path d="M556 552 L607 628 Q593 693 537 727 L515 714 L515 574Z" fill="url(#blue)" stroke="#092959" stroke-width="7"/>
+<path d="M313 554 Q284 551 262 581 L212 654 L257 687 L332 628Z" fill="url(#blue)" stroke="#092959" stroke-width="9"/>
+<path d="M589 551 Q618 548 639 581 L690 653 L646 688 L570 627Z" fill="url(#blue)" stroke="#092959" stroke-width="9"/>
+<path d="M210 638 Q175 629 157 656 L126 696 Q113 713 133 719 Q145 720 165 702 Q141 728 153 739 Q168 751 190 716 Q179 747 195 753 Q211 756 226 718 L231 699 Q252 706 263 685Z" fill="url(#red)" stroke="#80101a" stroke-width="8"/>
+<path d="M690 638 Q727 627 743 655 L774 695 Q789 713 768 720 Q755 719 735 702 Q759 729 746 739 Q731 751 710 716 Q721 747 705 753 Q688 756 674 718 L669 700 Q647 705 637 685Z" fill="url(#red)" stroke="#80101a" stroke-width="8"/>
+<path d="M450 638 l-7 16 -20 1 15 12 -5 19 17-11 17 11 -5-19 15-12 -20-1Z" fill="#162632"/>
+<path d="M450 654 v36 M431 660 l-18-9 M469 660 l18-9 M435 675 l-18 10 M465 675 l18 10" stroke="#162632" stroke-width="6" stroke-linecap="round"/>
+<!-- neck and lower exposed face -->
+<path d="M392 480 L508 480 L502 574 Q450 603 397 574Z" fill="url(#skin)" stroke="#7d4639" stroke-width="9"/>
+<path d="M276 280 Q302 170 450 157 Q598 170 624 280 L620 431 Q587 528 504 565 Q450 589 396 565 Q313 528 280 431Z" fill="url(#skin)" stroke="#7d4639" stroke-width="12"/>
+<ellipse cx="287" cy="421" rx="23" ry="43" fill="url(#skin)" stroke="#7d4639" stroke-width="8"/>
+<ellipse cx="613" cy="421" rx="23" ry="43" fill="url(#skin)" stroke="#7d4639" stroke-width="8"/>
+<path d="M450 409 Q435 445 444 452 Q451 456 462 451" fill="none" stroke="#9b5d4e" stroke-width="8" stroke-linecap="round"/>
+<path d="M375 470 Q450 525 525 470 Q519 536 450 541 Q381 536 375 470Z" fill="#6d2029" stroke="#772b30" stroke-width="9"/>
+<path d="M386 479 Q450 501 514 479 L508 505 Q451 519 392 505Z" fill="#fff7e9" stroke="#a67a6b" stroke-width="4"/>
+<path d="M399 512 Q450 526 501 512" fill="none" stroke="#f5d6be" stroke-width="5"/>
+<path d="M393 489 Q450 507 507 489 M399 501 Q450 516 501 501" fill="none" stroke="#a3aab3" stroke-width="5"/>
+<g fill="#c2c9d0" stroke="#64727e" stroke-width="2">
+  <rect x="403" y="484" width="15" height="13" rx="3"/><rect x="428" y="491" width="15" height="13" rx="3"/><rect x="456" y="491" width="15" height="13" rx="3"/><rect x="482" y="484" width="15" height="13" rx="3"/>
+</g>
+<path d="M326 468 Q345 457 369 475 M531 475 Q554 456 574 468" fill="none" stroke="#a65d51" stroke-width="6" stroke-linecap="round"/>
+<!-- raised mask cap -->
+<path d="M276 283 Q279 102 450 98 Q621 102 624 283 L621 387 Q581 416 524 405 Q474 394 450 399 Q425 394 377 405 Q319 416 280 387Z" fill="url(#red)" stroke="#7e0b1b" stroke-width="13"/>
+<!-- web lines -->
+<g fill="none" stroke="#9b1424" stroke-width="4" opacity=".9">
+  <path d="M450 103 V394 M450 104 Q354 210 321 395 M450 104 Q546 210 579 395 M353 128 Q397 201 408 399 M547 128 Q503 201 492 399"/>
+  <path d="M290 226 Q450 151 610 226 M280 302 Q450 234 620 302 M283 368 Q450 312 617 368"/>
+</g>
+<!-- eyes -->
+<path d="M292 267 Q334 245 375 276 Q416 304 438 352 Q412 386 356 388 Q303 386 285 351 Q278 317 292 267Z" fill="url(#eye)" stroke="#18232c" stroke-width="13"/>
+<path d="M608 267 Q566 245 525 276 Q484 304 462 352 Q488 386 544 388 Q597 386 615 351 Q622 317 608 267Z" fill="url(#eye)" stroke="#18232c" stroke-width="13"/>
+<!-- folded lower edge of lifted mask -->
+<path d="M282 382 Q322 412 382 399 Q424 391 450 400 Q476 391 518 399 Q578 412 618 382 L614 419 Q568 442 517 424 Q474 414 450 423 Q426 414 383 424 Q332 442 286 419Z" fill="url(#red)" stroke="#7d0e1d" stroke-width="10"/>
+<path d="M297 407 Q333 424 376 410 M524 410 Q567 424 603 407" fill="none" stroke="#f76767" stroke-width="5" opacity=".65"/>
+<!-- highlights -->
+<path d="M317 184 Q348 132 417 122" fill="none" stroke="#ff9390" stroke-width="12" stroke-linecap="round" opacity=".5"/>
+<path d="M353 561 Q401 541 425 552" fill="none" stroke="#ff8881" stroke-width="11" stroke-linecap="round" opacity=".4"/>
+</svg>
