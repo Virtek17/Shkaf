@@ -29,7 +29,7 @@ export default function AppTabs() {
       <TabSlot style={styles.slot} />
     </View>
     <TabList asChild>
-      <View style={StyleSheet.flatten([styles.bar, { backgroundColor: colors.background, paddingBottom: Math.max(insets.bottom, 8) }])}>
+      <View style={StyleSheet.flatten([styles.bar, { backgroundColor: colors.background, borderTopColor: colors.text, paddingBottom: Math.max(insets.bottom, 8) }])}>
         {tabs.map((tab) => <TabTrigger key={tab.name} name={tab.name} href={tab.href} asChild>
           <TabButton icon={tab.icon} color={colors.text}>{tab.label}</TabButton>
         </TabTrigger>)}
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     paddingBottom: screenLayout.bottom,
   },
   slot: { flex: 1 },
-  bar: { width: '100%', maxWidth: MaxContentWidth, alignSelf: 'center', borderTopWidth: 1, borderTopColor: '#111111', flexDirection: 'row' },
+  bar: { width: '100%', maxWidth: MaxContentWidth, alignSelf: 'center', borderTopWidth: 1, flexDirection: 'row' },
   button: { flex: 1, minWidth: 0, minHeight: 64, alignItems: 'center', justifyContent: 'center', gap: 4 },
   raised: { transform: [{ translateY: -4 }] },
   label: { fontSize: 12, lineHeight: 16, fontWeight: '500' },

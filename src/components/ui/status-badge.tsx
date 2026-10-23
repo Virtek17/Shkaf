@@ -5,7 +5,7 @@ type StatusBadgeProps = { label: string; tone: 'available' | 'active' | 'unavail
 
 export function StatusBadge({ label, tone }: StatusBadgeProps) {
   return <View style={[styles.badge, tone === 'available' && styles.available, tone === 'active' && styles.active, tone === 'unavailable' && styles.unavailable]}>
-    <Text style={styles.label}>{label}</Text>
+    <Text style={[styles.label, tone === 'unavailable' && styles.unavailableLabel]}>{label}</Text>
   </View>;
 }
 
@@ -15,4 +15,5 @@ const styles = StyleSheet.create({
   active: { backgroundColor: uiColors.orange },
   unavailable: { backgroundColor: uiColors.disabled },
   label: { ...uiType.label, color: uiColors.paper, textTransform: 'uppercase' },
+  unavailableLabel: { color: uiColors.ink },
 });

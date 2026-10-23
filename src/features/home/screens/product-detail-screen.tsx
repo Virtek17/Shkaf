@@ -5,12 +5,14 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { GridBackground } from '@/components/ui/grid-background';
 import { TeremText } from '@/components/ui/terem-text';
-import { uiColors, uiSpacing } from '@/constants/terem-tokens';
+import { uiSpacing } from '@/constants/terem-tokens';
 import { getCatalogProduct } from '@/features/home/data/catalog-products';
+import { useTheme } from '@/hooks/use-theme';
 
 export function ProductDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const insets = useSafeAreaInsets();
+  const theme = useTheme();
   const product = getCatalogProduct(id ?? '');
 
   const goBack = () => {
@@ -19,8 +21,8 @@ export function ProductDetailScreen() {
   };
 
   return (
-    <View style={styles.screen}>
-      <GridBackground />
+    <View style={[styles.screen, { backgroundColor: theme.background }]}>
+      <GridBackground dark={theme.background === '#000000'} />
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={[
@@ -29,20 +31,20 @@ export function ProductDetailScreen() {
         ]}
       >
         <Pressable onPress={goBack} accessibilityRole="button" accessibilityLabel="Назад в каталог" style={styles.backButton}>
-          <Text style={styles.backArrow}>←</Text>
-          <Text style={styles.backLabel}>КАТАЛОГ</Text>
+          <Text style={[styles.backArrow, { color: theme.text }]}>←</Text>
+          <Text style={[styles.backLabel, { color: theme.text }]}>КАТАЛОГ</Text>
         </Pressable>
 
         {product ? (
           <>
-            <TeremText variant="caption" style={styles.id}>ВЕЩЬ / ID_{product.id.padStart(3, '0')}</TeremText>
-            <TeremText variant="section" style={styles.title}>{product.name}</TeremText>
+            <TeremText variant="caption" style={{ color: theme.textSecondary }}>ВЕЩЬ / ID_{product.id.padStart(3, '0')}</TeremText>
+            <TeremText variant="section">{product.name}</TeremText>
             <View style={styles.imageFrame}>
               <Image source={product.photo} style={styles.image} contentFit="contain" alt={product.name} />
             </View>
-            <TeremText variant="section" accent style={styles.price}>{product.price} ₽ / час</TeremText>
+            <TeremText variant="section" accent style={[styles.price, { borderTopColor: theme.text }]}>{product.price} ₽ / час</TeremText>
             {product.description ? (
-              <View style={styles.descriptionSection}>
+              <View style={[styles.descriptionSection, { borderTopColor: theme.text }]}>
                 <TeremText variant="label">О ТОВАРЕ</TeremText>
                 <TeremText>{product.description}</TeremText>
               </View>
@@ -57,15 +59,13 @@ export function ProductDetailScreen() {
 }
 
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: uiColors.paper },
+  screen: { flex: 1 },
   content: { paddingHorizontal: uiSpacing.xl, gap: uiSpacing.lg },
   backButton: { minHeight: 48, flexDirection: 'row', alignItems: 'center', gap: uiSpacing.md, alignSelf: 'flex-start' },
-  backArrow: { fontSize: 30, color: uiColors.ink },
-  backLabel: { fontSize: 14, fontWeight: '700', color: uiColors.ink },
-  id: { color: uiColors.muted },
-  title: { color: uiColors.ink },
+  backArrow: { fontSize: 30 },
+  backLabel: { fontSize: 14, fontWeight: '700' },
   imageFrame: { width: '100%', aspectRatio: 1, overflow: 'hidden' },
   image: { width: '100%', height: '100%' },
-  price: { borderTopWidth: 2, borderTopColor: uiColors.ink, paddingTop: uiSpacing.md },
-  descriptionSection: { borderTopWidth: 1, borderTopColor: uiColors.ink, paddingTop: uiSpacing.md, gap: uiSpacing.sm },
+  price: { borderTopWidth: 2, paddingTop: uiSpacing.md },
+  descriptionSection: { borderTopWidth: 1, paddingTop: uiSpacing.md, gap: uiSpacing.sm },
 });

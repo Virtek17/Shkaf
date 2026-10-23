@@ -9,8 +9,10 @@ import { router } from "expo-router";
 import { SearchIcon } from "@/components/icons";
 import { Image } from "expo-image";
 import { catalogProducts } from "@/features/home/data/catalog-products";
+import { useTheme } from "@/hooks/use-theme";
 
 export function HomeScreen() {
+  const theme = useTheme();
   return (
     <ThemedView style={styles.screen}>
       <FlatList
@@ -31,7 +33,11 @@ export function HomeScreen() {
               />
             </View>
             <View style={[styles.searchBar, styles.block]}>
-              <TextInput style={styles.input} placeholder="Найти вещь" />
+              <TextInput
+                style={[styles.input, { color: theme.text, borderColor: theme.text }]}
+                placeholder="Найти вещь"
+                placeholderTextColor={theme.textSecondary}
+              />
               <TeremButton
                 icon={<SearchIcon width={24} height={24} />}
                 accessibilityLabel="Поиск"
@@ -94,7 +100,6 @@ const styles = StyleSheet.create({
   input: {
     width: "80%",
     padding: 10,
-    borderColor: "#363435",
     borderWidth: 1,
   },
   searchBar: {
