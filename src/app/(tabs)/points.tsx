@@ -1,3 +1,3 @@
-import { PointsScreen } from "@/features/points/screens/points-screen";
+import { PointsScreen } from "@/features/points";
 
 export default PointsScreen;

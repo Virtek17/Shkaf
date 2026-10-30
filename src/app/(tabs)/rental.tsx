@@ -1,3 +1,3 @@
-import { RentalsScreen } from "@/features/rentals/screens/rentals-screen";
+import { RentalsScreen } from "@/features/rentals";
 
 export default RentalsScreen;

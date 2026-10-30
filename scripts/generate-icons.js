@@ -2,7 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const iconsDir = path.join(__dirname, '..', 'assets', 'icons');
-const outputFile = path.join(__dirname, '..', 'src', 'components', 'icons', 'index.tsx');
+const outputFile = path.join(__dirname, '..', 'src', 'shared', 'ui', 'icons', 'index.tsx');
 
 const toComponentName = (filename) => {
   const words = path.basename(filename, '.svg').split(/[^a-zA-Z0-9]+/).filter(Boolean);

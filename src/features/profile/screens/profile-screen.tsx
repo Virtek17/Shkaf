@@ -1,6 +1,6 @@
-import { ThemedText } from "@/components/themed-text";
-import { ThemedView } from "@/components/themed-view";
-import { ScreenHeader } from "@/components/ui/screen-header";
+import { ThemedText } from "@/shared/ui/themed-text";
+import { ThemedView } from "@/shared/ui/themed-view";
+import { ScreenHeader } from "@/shared/ui/screen-header";
 import { View } from "react-native";
 
 export function ProfileScreen() {

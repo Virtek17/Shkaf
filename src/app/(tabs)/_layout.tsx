@@ -1,3 +1,3 @@
-import AppTabs from '@/components/app-tabs';
+import AppTabs from '@/core/navigation/app-tabs';
 
 export default AppTabs;

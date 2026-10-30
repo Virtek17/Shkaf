@@ -1,3 +1,4 @@
-import { ExploreScreen } from '@/features/explore/screens/explore-screen';
+import { Redirect } from 'expo-router';
 
-export default ExploreScreen;
+/** Старая ссылка из шаблона. */
+export default function ExploreRedirect() { return <Redirect href="/" />; }
